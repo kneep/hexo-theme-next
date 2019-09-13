@@ -3,20 +3,19 @@ ul.breadcrumb {
   margin: 1em 0;
   padding: 0 2em;
   text-align: center;
-  font-size: $font-size-small
+  font-size: $font-size-smallest;
 
   & li {
-      display: inline;
+    display: inline;
   }
 
-  & li+li:before {
-      padding: 0.5em;
-      font-weight: normal;
-      content: "/\00a0";
+  & li+li::before {
+    padding: 0.5em;
+    font-weight: normal;
+    content: "/\00a0";
   }
 
   & li+li:last-child {
     font-weight: bold;
   }
-
 }
