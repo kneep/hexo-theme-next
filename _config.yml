@@ -99,7 +99,7 @@ footer:
 creative_commons:
   license: by-nc-sa
   sidebar: false
-  post: false
+  post: true
   language:
 
 
@@ -116,7 +116,7 @@ disable_baidu_transformation: false
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
@@ -127,11 +127,11 @@ exturl: false
 
 # Google Webmaster tools verification.
 # See: https://www.google.com/webmasters
-google_site_verification:
+google_site_verification: DIE0Wlh-SLTFUNEkZ2BUjfEAZfxmZfUeK7VOM49zUJs
 
 # Bing Webmaster tools verification.
 # See: https://www.bing.com/webmaster
-bing_site_verification:
+bing_site_verification: 4B5475EE8FD1E0C893130B4C3973FAC7
 
 # Yandex Webmaster tools verification.
 # See: https://webmaster.yandex.ru
@@ -177,8 +177,8 @@ menu_settings:
 
 # Schemes
 #scheme: Muse
-#scheme: Mist
-scheme: Pisces
+scheme: Mist
+#scheme: Pisces
 #scheme: Gemini
 
 
@@ -332,7 +332,7 @@ reward_settings:
   # You can show or hide reward in a specific article throuth `reward: true | false` in Front-matter.
   enable: false
   animation: false
-  #comment: Donate comment here.
+  #comment: 请我喝杯咖啡
 
 reward:
   #wechatpay: /images/wechatpay.png
