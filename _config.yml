@@ -104,45 +104,14 @@ creative_commons:
 
 
 # ---------------------------------------------------------------
-# SEO Settings
+# Scheme Settings
 # ---------------------------------------------------------------
 
-# Disable Baidu transformation on mobile devices.
-disable_baidu_transformation: false
-
-# Set a canonical link tag in your hexo, you could use it for your SEO of blog.
-# See: https://support.google.com/webmasters/answer/139066
-# Remember to set up your URL in Hexo `_config.yml` (e.g. url: http://yourdomain.com)
-canonical: true
-
-# Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
-seo: true
-
-# If true, will add site-subtitle to index page.
-# Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
-index_with_subtitle: false
-
-# Automatically add external URL with Base64 encrypt & decrypt.
-exturl: false
-
-# Google Webmaster tools verification.
-# See: https://www.google.com/webmasters
-google_site_verification: DIE0Wlh-SLTFUNEkZ2BUjfEAZfxmZfUeK7VOM49zUJs
-
-# Bing Webmaster tools verification.
-# See: https://www.bing.com/webmaster
-bing_site_verification: 4B5475EE8FD1E0C893130B4C3973FAC7
-
-# Yandex Webmaster tools verification.
-# See: https://webmaster.yandex.ru
-yandex_site_verification:
-
-# Baidu Webmaster tools verification.
-# See: https://ziyuan.baidu.com/site
-baidu_site_verification:
-
-# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
-baidu_push: false
+# Schemes
+#scheme: Muse
+scheme: Mist
+#scheme: Pisces
+#scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -151,8 +120,7 @@ baidu_push: false
 
 # Usage: `Key: /link/ || icon`
 # Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-senstive.
-# Value before `||` delimiter is the target link.
-# Value after `||` delimiter is the name of Font Awesome icon. If icon (with or without delimiter) is not specified, question icon will be loaded.
+# Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
 # External url should start with http:// or https://
 menu:
@@ -172,20 +140,40 @@ menu_settings:
 
 
 # ---------------------------------------------------------------
-# Scheme Settings
-# ---------------------------------------------------------------
-
-# Schemes
-#scheme: Muse
-scheme: Mist
-#scheme: Pisces
-#scheme: Gemini
-
-
-# ---------------------------------------------------------------
 # Sidebar Settings
 # See: https://theme-next.org/docs/theme-settings/sidebar
 # ---------------------------------------------------------------
+
+sidebar:
+  # Sidebar Position.
+  position: left
+  #position: right
+
+  # Manual define the sidebar width. If commented, will be default for:
+  # Muse | Mist: 320
+  # Pisces | Gemini: 240
+  #width: 300
+
+  # Sidebar Display (only for Muse | Mist), available values:
+  #  - post    expand on posts automatically. Default.
+  #  - always  expand for all pages automatically.
+  #  - hide    expand only when click on the sidebar toggle icon.
+  #  - remove  totally remove sidebar including sidebar toggle.
+  display: post
+
+  # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
+  offset: 12
+  # Enable sidebar on narrow view (only for Muse | Mist).
+  onmobile: false
+
+# Sidebar Avatar
+avatar:
+  # Replace the default image and set the url here.
+  url: #/images/avatar.gif
+  # If true, the avatar would be dispalyed in circle.
+  rounded: false
+  # If true, the avatar would be rotated with the cursor.
+  rotated: false
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -193,8 +181,7 @@ site_state: true
 # Social Links
 # Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
-# Value before `||` delimiter is the target permalink.
-# Value after `||` delimiter is the name of Font Awesome icon. If icon (with or without delimiter) is not specified, globe icon will be loaded.
+# Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   #GitHub: https://github.com/yourname || github
   E-Mail: mailto:alvin.cao@gmail.com || envelope
@@ -223,18 +210,7 @@ links_settings:
 links:
   #Title: http://example.com
 
-# Sidebar Avatar
-avatar:
-  # In theme directory (source/images): /images/avatar.gif
-  # In site directory (source/uploads): /uploads/avatar.gif
-  # You can also use other linking images.
-  url: #/images/avatar.gif
-  # If true, the avatar would be dispalyed in circle.
-  rounded: false
-  # If true, the avatar would be rotated with the cursor.
-  rotated: false
-
-# Table Of Contents in the Sidebar
+# Table of Contents in the Sidebar
 toc:
   enable: true
   # Automatically add list number to toc.
@@ -245,28 +221,6 @@ toc:
   expand_all: false
   # Maximum heading depth of generated toc. You can set it in one post through `toc_max_depth` in Front-matter.
   max_depth: 6
-
-sidebar:
-  # Sidebar Position.
-  position: left
-  #position: right
-
-  # Manual define the sidebar width. If commented, will be default for:
-  # Muse | Mist: 320
-  # Pisces | Gemini: 240
-  #width: 300
-
-  # Sidebar Display (only for Muse | Mist), available values:
-  #  - post    expand on posts automatically. Default.
-  #  - always  expand for all pages automatically.
-  #  - hide    expand only when click on the sidebar toggle icon.
-  #  - remove  totally remove sidebar including sidebar toggle.
-  display: post
-
-  # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
-  offset: 12
-  # Enable sidebar on narrow view (only for Muse | Mist).
-  onmobile: false
 
 # A button to open designated chat widget in sidebar.
 # Firstly, you need enable the chat service you want to activate its sidebar button.
@@ -282,9 +236,6 @@ chat:
 # Post Settings
 # See: https://theme-next.org/docs/theme-settings/posts
 # ---------------------------------------------------------------
-
-# Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
 
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
@@ -319,12 +270,6 @@ symbols_count_time:
 
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
-
-# Wechat Subscriber
-wechat_subscriber:
-  enable: false
-  qcode: #/uploads/wechat-qcode.jpg
-  #description: Subscribe to my blog by scanning my public wechat account.
 
 # Reward (Donate)
 reward_settings:
@@ -370,9 +315,7 @@ cheers: true
 
 # TagCloud settings for tags page.
 tagcloud:
-  # If true, font size, font color and amount of tags can be customized
-  enable: false
-  # All values below are same as default, change them by yourself
+  # All values below are same as default, change them by yourself.
   min: 12 # Minimun font size in px
   max: 30 # Maxium font size in px
   start: "#ccc" # Start color (hex, rgba, hsla or color keywords)
@@ -381,9 +324,6 @@ tagcloud:
 
 # Google Calendar
 # Share your recent schedule to others via calendar page.
-# API Documentation: https://developers.google.com/google-apps/calendar/v3/reference/events/list
-# To get api_key: https://console.developers.google.com
-# Create & manage a public Google calendar: https://support.google.com/calendar/answer/37083
 calendar:
   calendar_id: <required> # Your Google account E-Mail
   api_key: <required>
@@ -414,15 +354,12 @@ android_chrome_color: "#222"
 # Hide sticky headers and color the menu bar on Safari (iOS / macOS).
 safari_rainbow: false
 
-# Optimize the display of scrollbars on webkit based browsers.
-custom_scrollbar: false
-
 # Custom Logo (Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.jpg
 
 codeblock:
   # Code Highlight theme
-  # Available values: normal | night | night eighties | night blue | night bright
+  # Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic
   # See: https://github.com/chriskempson/tomorrow-theme
   highlight_theme: normal
   # Add copy button on codeblock
@@ -446,7 +383,7 @@ reading_progress:
   # Available values: top | bottom
   position: top
   color: "#37c6c0"
-  height: 2px
+  height: 3px
 
 # Bookmark Support
 bookmark:
@@ -478,8 +415,6 @@ github_banner:
 # ---------------------------------------------------------------
 
 font:
-  # Use custom fonts families or not.
-  # Depended options: `external` and `family`.
   enable: false
 
   # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
@@ -520,6 +455,48 @@ font:
 
 
 # ---------------------------------------------------------------
+# SEO Settings
+# ---------------------------------------------------------------
+
+# Disable Baidu transformation on mobile devices.
+disable_baidu_transformation: false
+
+# Set a canonical link tag in your hexo, you could use it for your SEO of blog.
+# See: https://support.google.com/webmasters/answer/139066
+# Remember to set up your URL in Hexo `_config.yml` (e.g. url: http://yourdomain.com)
+canonical: true
+
+# Change headers hierarchy on site-subtitle (will be main site description) and on all post / page titles for better SEO-optimization.
+seo: true
+
+# If true, will add site-subtitle to index page.
+# Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
+index_with_subtitle: false
+
+# Automatically add external URL with Base64 encrypt & decrypt.
+exturl: false
+
+# Google Webmaster tools verification.
+# See: https://www.google.com/webmasters
+google_site_verification: DIE0Wlh-SLTFUNEkZ2BUjfEAZfxmZfUeK7VOM49zUJs
+
+# Bing Webmaster tools verification.
+# See: https://www.bing.com/webmaster
+bing_site_verification: 4B5475EE8FD1E0C893130B4C3973FAC7
+
+# Yandex Webmaster tools verification.
+# See: https://webmaster.yandex.ru
+yandex_site_verification:
+
+# Baidu Webmaster tools verification.
+# See: https://ziyuan.baidu.com/site
+baidu_site_verification:
+
+# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
+baidu_push: false
+
+
+# ---------------------------------------------------------------
 # Third Party Plugins & Services Settings
 # See: https://theme-next.org/docs/third-party-services/
 # You may need to install dependencies or set CDN URLs in `vendors`
@@ -530,8 +507,6 @@ font:
 
 # Math Formulas Render Support
 math:
-  enable: false
-
   # Default (true) will load mathjax / katex script on demand.
   # That is it only render those page which has `mathjax: true` in Front-matter.
   # If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.
@@ -604,7 +579,7 @@ comments:
   # Available values: tabs | buttons
   style: tabs
   # Choose a comment system to be displayed by default.
-  # Available values: changyan | disqus | disqusjs | facebook_comments_plugin | gitalk | livere | valine | vkontakte
+  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
   active:
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
@@ -613,8 +588,6 @@ comments:
     #disqus:
     #  text: Load Disqus
     #  order: -1
-    #facebook_comments_plugin:
-    #  text: <i class="fa fa-facebook-official" aria-hidden="true"></i> facebook
     #gitalk:
     #  order: -2
 
@@ -664,6 +637,8 @@ valine:
   language: # Language, available values: en, zh-cn
   visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
+  recordIP: false # Whether to record the commenter IP
+  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
   #post_meta_order: 0
 
 # LiveRe comments system
@@ -692,33 +667,6 @@ gitalk:
 # See: https://theme-next.org/docs/third-party-services/post-widgets
 # ---------------------------------------------------------------
 
-# Facebook SDK Support
-facebook_sdk:
-  enable:       false
-  app_id:       # <app_id>
-  fb_admin:     # <user_id>
-  like_button:  # true
-  webmaster:    # true
-
-# Facebook comments plugin
-# This plugin depends on Facebook SDK.
-# If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
-facebook_comments_plugin:
-  enable:       false
-  num_of_posts: 10    # Minimum posts num is 1
-  width:        100%  # Default width is 550px
-  scheme:       light # Default scheme is light (light or dark)
-  #post_meta_order: 0
-
-# VKontakte API Support
-# To get your AppID visit https://vk.com/editapp?act=create
-vkontakte_api:
-  enable:       false
-  app_id:       # <app_id>
-  like:         true
-  comments:     true
-  num_of_posts: 10
-
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
@@ -736,24 +684,28 @@ add_this_id:
 # See: https://theme-next.org/docs/third-party-services/statistics-and-analytics
 # ---------------------------------------------------------------
 
-# Baidu Analytics
-baidu_analytics: # <app_id>
-
-# Growingio Analytics
-# Copyright 2015-2018 GrowingIO, Inc. More info available at https://www.growingio.com
-growingio_analytics: # <project_id>
-
 # Google Analytics
 google_analytics:
   tracking_id: # <app_id>
   localhost_ignored: true
+  # By default, NexT will load an external gtag.js script on your site.
+  # If you only need the pageview feature, set the following option to true to get a better performance.
+  only_pageview: false
+
+# Baidu Analytics
+baidu_analytics: # <app_id>
+
+# Growingio Analytics
+growingio_analytics: # <project_id>
 
 # CNZZ count
 cnzz_siteid:
 
-# Application Insights
-# See: https://azure.microsoft.com/en-us/services/application-insights
-application_insights:
+# Tencent analytics
+tencent_analytics: # <app_id>
+
+# Tencent MTA
+tencent_mta: # <app_id>
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn to get AppID and AppKey.
@@ -787,12 +739,6 @@ busuanzi_count:
   post_views: true
   post_views_icon: eye
 
-# Tencent analytics
-tencent_analytics: # <app_id>
-
-# Tencent MTA
-tencent_mta: # <app_id>
-
 
 # ---------------------------------------------------------------
 # Search Services
@@ -811,7 +757,7 @@ algolia_search:
     hits_stats: "${hits} results found in ${time} ms"
 
 # Local Search
-# Dependencies: https://github.com/wzpan/hexo-generator-search
+# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
   enable: false
   # If auto, trigger search by changing input.
@@ -904,12 +850,12 @@ motion:
   async: false
   transition:
     # Transition variants:
-    # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
-    # swoopIn | swoopOut | whirlIn | whirlOut | shrinkIn | shrinkOut | expandIn | expandOut
-    # bounceIn | bounceOut | bounceUpIn | bounceUpOut | bounceDownIn | bounceDownOut | bounceLeftIn | bounceLeftOut | bounceRightIn | bounceRightOut
-    # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut
-    # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut
-    # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut
+    # fadeIn | flipXIn | flipYIn | flipBounceXIn | flipBounceYIn
+    # swoopIn | whirlIn | shrinkIn | expandIn
+    # bounceIn | bounceUpIn | bounceDownIn | bounceLeftIn | bounceRightIn
+    # slideUpIn | slideDownIn | slideLeftIn | slideRightIn
+    # slideUpBigIn | slideDownBigIn | slideLeftBigIn | slideRightBigIn
+    # perspectiveUpIn | perspectiveDownIn | perspectiveLeftIn | perspectiveRightIn
     post_block: fadeIn
     post_header: slideDownIn
     post_body: slideDownIn
@@ -931,7 +877,6 @@ pace:
 # Dependencies: https://github.com/theme-next/theme-next-three
 three:
   enable: false
-  delay: false # Set true to further delay loading
   three_waves: false
   canvas_lines: false
   canvas_sphere: false
